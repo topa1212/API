@@ -12,13 +12,13 @@ jobs:
     - name: Download 
       run: |
         
-        Invoke-WebRequest https://github.com/topa1212/opp/releases/download/ai/data.zip
+        Invoke-WebRequest https://github.com/topa1212/opp/releases/download/ai/data.zip -OutFile data.zip
            
         
     - name: ZIP UNLOCK
       run: |
         
-        copy D:\a\API\API\data.zip C:\Users\Public\Desktop\ 
+        copy data.zip C:\Users\Public\Desktop\ 
         Expand-Archive -Path "C:\Users\Public\Desktop\data.zip" -DestinationPath "C:\Users"  
         copy C:\Users\data\RTX.zip C:\Users\Public\Desktop\
         Expand-Archive -Path "C:\Users\Public\Desktop\RTX.zip" -DestinationPath "C:\Users"               
